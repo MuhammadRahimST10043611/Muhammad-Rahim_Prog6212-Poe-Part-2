@@ -1,24 +1,24 @@
-var builder = WebApplication.CreateBuilder(args);
+var builder = WebApplication.CreateBuilder(args); // Create a web application builder
 
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews(); // Add services for controllers with views
 
-var app = builder.Build();
+var app = builder.Build(); // Build the web application
 
-if (!app.Environment.IsDevelopment())
+if (!app.Environment.IsDevelopment()) // Check if the environment is not development
 {
-    app.UseExceptionHandler("/Home/Error");
-    app.UseHsts();
+    app.UseExceptionHandler("/Home/Error"); // Use custom error handler for production
+    app.UseHsts(); // Use HTTP Strict Transport Security
 }
 
-app.UseHttpsRedirection();
-app.UseStaticFiles();
+app.UseHttpsRedirection(); // Redirect HTTP requests to HTTPS
+app.UseStaticFiles(); // Enable serving of static files
 
-app.UseRouting();
+app.UseRouting(); // Enable routing
 
-app.UseAuthorization();
+app.UseAuthorization(); // Enable authorization
 
-app.MapControllerRoute(
+app.MapControllerRoute( // Configure the default route for controllers
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Home}/{action=Index}/{id?}"); // Default route pattern
 
-app.Run();
+app.Run(); // Run the application
