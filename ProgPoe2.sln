@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProgPoe2", "ProgPoe2\ProgPoe2.csproj", "{95C27141-78F8-4D0D-8765-97BB21AF0BC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClaimTests", "ClaimTests\ClaimTests.csproj", "{8E14D786-A61C-454B-A8DC-D88EB63FED42}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{95C27141-78F8-4D0D-8765-97BB21AF0BC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95C27141-78F8-4D0D-8765-97BB21AF0BC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95C27141-78F8-4D0D-8765-97BB21AF0BC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95C27141-78F8-4D0D-8765-97BB21AF0BC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E14D786-A61C-454B-A8DC-D88EB63FED42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E14D786-A61C-454B-A8DC-D88EB63FED42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E14D786-A61C-454B-A8DC-D88EB63FED42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E14D786-A61C-454B-A8DC-D88EB63FED42}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FA59D5CD-8FF8-44FB-A143-369F56C7DCE1}
+	EndGlobalSection
+EndGlobal
