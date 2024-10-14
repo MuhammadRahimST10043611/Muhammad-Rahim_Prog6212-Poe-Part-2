@@ -1,50 +1,54 @@
-﻿@model List<Claim>
+﻿@model List<Claim> // The model passed to this view is a list of Claim objects
 
-<h2>Lecture Claims</h2>
+<h2>Lecture Claims</h2> // Heading for the claims table
 
+// Displays a table of claims
 <table class="table">
     <thead>
         <tr>
-            <th>ID</th>
-            <th>Lecturer Name</th>
-            <th>Submission Date</th>
-            <th>Hours Worked</th>
-            <th>Hourly Rate</th>
-            <th>Total Amount</th>
-            <th>Status</th>
-            <th>Document</th>
-            <th>Notes</th>
-            <th>Actions</th>
+            <th>ID</th> // Column for claim ID
+            <th>Lecturer Name</th> // Column for lecturer name
+            <th>Submission Date</th> // Column for submission date
+            <th>Hours Worked</th> // Column for hours worked
+            <th>Hourly Rate</th> // Column for hourly rate
+            <th>Total Amount</th> // Column for total amount calculated
+            <th>Status</th> // Column for claim status
+            <th>Document</th> // Column for supporting document
+            <th>Notes</th> // Column for additional notes
+            <th>Actions</th> // Column for action buttons (Edit/Remove)
         </tr>
     </thead>
     <tbody>
-        @foreach (var claim in Model)
+        @foreach (var claim in Model) // Loop through each claim in the model
         {
             <tr>
-                <td>@claim.Id</td>
-                <td>@claim.LecturerName</td>
-                <td>@claim.SubmissionDate.ToShortDateString()</td>
-                <td>@claim.HoursWorked</td>
-                <td>R @claim.HourlyRate.ToString("F2")</td>
-                <td>R @((claim.HoursWorked * claim.HourlyRate).ToString("F2"))</td>
+                <td>@claim.Id</td> // Display claim ID
+                <td>@claim.LecturerName</td> // Display lecturer name
+                <td>@claim.SubmissionDate.ToShortDateString()</td> // Display submission date
+                <td>@claim.HoursWorked</td> // Display hours worked
+                <td>R @claim.HourlyRate.ToString("F2")</td> // Display hourly rate with 2 decimal places
+                <td>R @((claim.HoursWorked * claim.HourlyRate).ToString("F2"))</td> // Calculate and display total amount
                 <td>
                     <span class="badge @(claim.Status == "Approved" ? "bg-success" :
                                        claim.Status == "Rejected" ? "bg-danger" : "bg-warning") text-white">
+                        // Display status with appropriate color
                         @claim.Status
                     </span>
                 </td>
                 <td>
-                    @if (!string.IsNullOrEmpty(claim.SupportingDocumentName))
+                    @if (!string.IsNullOrEmpty(claim.SupportingDocumentName)) // If a document is present, show a link
                     {
                         <a href="#" onclick="alert('Document: @claim.SupportingDocumentName');">@claim.SupportingDocumentName</a>
+                        // Placeholder for document link
                     }
                 </td>
-                <td>@claim.Notes</td>
+                <td>@claim.Notes</td> // Display additional notes
                 <td>
-                    <a asp-action="EditClaim" asp-route-id="@claim.Id" class="btn btn-primary btn-sm">Edit</a>
+                    <a asp-action="EditClaim" asp-route-id="@claim.Id" class="btn btn-primary btn-sm">Edit</a> // Edit button
                     <form asp-action="RemoveClaim" method="post" style="display: inline;">
-                        <input type="hidden" name="id" value="@claim.Id" />
-                        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to remove this claim?');">Remove</button>
+                        // Form for removing the claim
+                        <input type="hidden" name="id" value="@claim.Id" /> // Hidden field for claim ID
+                        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to remove this claim?');">Remove</button> // Remove button with confirmation
                     </form>
                 </td>
             </tr>
