@@ -24,7 +24,7 @@ namespace ProgPoe2.Tests
             };
             return controller; // Return the configured controller
         }
-
+        
         // Test to ensure a valid claim is added to the repository
         [TestMethod]
         public void SubmitClaim_ValidClaim_AddsToRepository()
