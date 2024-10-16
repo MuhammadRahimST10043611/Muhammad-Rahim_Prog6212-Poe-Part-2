@@ -57,7 +57,7 @@ I Updated My Home Page to have buttons that lead you to each part of the website
 Home Page 2
 I also Improved the colour scheme allowing it to look more formal and stand out better to the users.
  
-![image](https://github.com/user-attachments/assets/9f1067d8-4425-47d8-b824-d9dd694c2494)
+![image](https://github.com/user-attachments/assets/a5b78ca7-017d-427c-9bd0-0081fe0785c8)
 
 
 
