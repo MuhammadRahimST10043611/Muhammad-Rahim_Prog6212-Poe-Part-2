@@ -1,55 +1,47 @@
 ﻿@model Claim // The model passed to this view is a Claim object
 
-<h2>Edit Claim</h2> // Heading for the page
+<h2>Edit Claim</h2>
 
-// Form for editing an existing claim, enctype="multipart/form-data" allows file uploads
 <form asp-action="EditClaim" method="post" enctype="multipart/form-data">
-    <input type="hidden" asp-for="Id" /> // Hidden field for claim ID
+    <input type="hidden" asp-for="Id" /> 
 
-    // Input for Lecturer Name
     <div class="form-group">
-        <label asp-for="LecturerName">Lecturer Name</label> // Label for Lecturer Name input
-        <input asp-for="LecturerName" class="form-control" required /> // Input field for Lecturer Name, required
+        <label asp-for="LecturerName">Lecturer Name</label>
+        <input asp-for="LecturerName" class="form-control" required /> 
     </div>
 
-    // Input for Hours Worked
     <div class="form-group">
-        <label asp-for="HoursWorked">Hours Worked</label> // Label for Hours Worked input
-        <input asp-for="HoursWorked" type="number" step="0.5" class="form-control" required /> // Input field for hours worked, number type with step of 0.5
+        <label asp-for="HoursWorked">Hours Worked</label>
+        <input asp-for="HoursWorked" type="number" step="0.5" class="form-control" required /> 
     </div>
 
-    // Input for Hourly Rate
     <div class="form-group">
-        <label asp-for="HourlyRate">Hourly Rate (R)</label> // Label for Hourly Rate input
-        <input asp-for="HourlyRate" type="number" step="0.01" class="form-control" required /> // Input field for hourly rate, number type with step of 0.01
+        <label asp-for="HourlyRate">Hourly Rate (R)</label>
+        <input asp-for="HourlyRate" type="number" step="0.01" class="form-control" required />
     </div>
 
-    // Input for additional notes
     <div class="form-group">
-        <label asp-for="Notes">Additional Notes</label> // Label for Notes input
-        <textarea asp-for="Notes" class="form-control"></textarea> // Text area for additional notes
+        <label asp-for="Notes">Additional Notes</label> 
+        <textarea asp-for="Notes" class="form-control"></textarea> 
     </div>
 
-    // Input for claim status
     <div class="form-group">
-        <label asp-for="Status">Status</label> // Label for status dropdown
-        <select asp-for="Status" class="form-control"> // Dropdown to select claim status
-            <option value="Pending">Pending</option> // Option for Pending status
-            <option value="Approved">Approved</option> // Option for Approved status
-            <option value="Rejected">Rejected</option> // Option for Rejected status
+        <label asp-for="Status">Status</label>
+        <select asp-for="Status" class="form-control"> 
+            <option value="Pending">Pending</option> 
+            <option value="Approved">Approved</option> 
+            <option value="Rejected">Rejected</option> 
         </select>
     </div>
 
-    // Input for uploading a new supporting document
     <div class="form-group">
-        <label for="file">Supporting Document</label> // Label for file input
-        <input type="file" id="file" name="file" class="form-control-file" /> // File input for supporting document
+        <label for="file">Supporting Document</label> 
+        <input type="file" id="file" name="file" class="form-control-file" /> 
         @if (!string.IsNullOrEmpty(Model.SupportingDocumentName)) // If there is a current file, display its name
         {
             <p>Current file: @Model.SupportingDocumentName</p> // Display the name of the current document
         }
     </div>
 
-    // Submit button for saving changes
-    <button type="submit" class="btn btn-primary">Save Changes</button> // Button to submit the form and save changes
+    <button type="submit" class="btn btn-primary">Save Changes</button>
 </form>

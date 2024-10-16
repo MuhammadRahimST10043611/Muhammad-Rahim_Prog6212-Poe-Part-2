@@ -1,43 +1,38 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
- // Specifies the language of the document
 <head>
-    <meta charset="utf-8" /> // Character encoding for the document
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> // Responsive design for mobile devices
-    <title>@ViewData["Title"] - Contract Monthly Claim System</title> // Sets the title for the page
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" /> // Bootstrap CSS
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" /> // Custom site CSS
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" /> // Font Awesome CSS for icons
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Contract Monthly Claim System</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-light bg-white">
-            // Navigation bar
             <div class="container">
-                // Container for navbar elements
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
-                    <img src="~/images/logo.png" alt="CMCS Logo" /> // Logo for the site
-                    <span class="ml-2">CMCS</span> // Brand name
+                    <img src="~/images/logo.png" alt="CMCS Logo" />
+                    <span class="ml-2">CMCS</span>
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent" // Button for toggling navbar in mobile view
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span> // Icon for the toggler
+                    <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    // Collapsible navbar content
                     <ul class="navbar-nav flex-grow-1">
-                        // List of navigation links
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index"><i class="fas fa-home"></i> Home</a> // Home link
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index"><i class="fas fa-home"></i> Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="SubmitClaim"><i class="fas fa-file-invoice-dollar"></i> Lecture Submit Claim</a> // Submit Claim link
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="SubmitClaim"><i class="fas fa-file-invoice-dollar"></i> Lecture Submit Claim</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="ViewClaims"><i class="fas fa-list"></i> Lecture View Claims Dashboard</a> // View Claims link
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="ViewClaims"><i class="fas fa-list"></i> Lecture View Claims Dashboard</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="ApprovalDashboard"><i class="fas fa-check-circle"></i> Coordinators/Managers Approval Dashboard</a> // Approval Dashboard link
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="ApprovalDashboard"><i class="fas fa-check-circle"></i> Coordinators/Managers Approval Dashboard</a>
                         </li>
                     </ul>
                 </div>
@@ -45,23 +40,20 @@
         </nav>
     </header>
     <div class="container">
-        // Main content container
         <main role="main" class="pb-3">
-            // Main content area
-            @RenderBody() // Placeholder for views to render their content
+            @RenderBody()
         </main>
     </div>
 
     <footer class="border-top footer text-muted">
-        // Footer section
         <div class="container">
-            &copy; 2024 - Contract Monthly Claim System - <a asp-area="" asp-controller="Home" asp-action="Index">Home</a> // Footer text with link to home
+            &copy; 2024 - Contract Monthly Claim System - <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
         </div>
     </footer>
 
-    <script src="~/lib/jquery/dist/jquery.min.js"></script> // jQuery script
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script> // Bootstrap JS
-    <script src="~/js/site.js" asp-append-version="true"></script> // Custom site JS
-    @await RenderSectionAsync("Scripts", required: false) // Placeholder for additional scripts in views
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
