@@ -47,6 +47,7 @@ https://st10043611prog.azurewebsites.net/
 
 Please Note that no database was used all data is stored in lists as part 2 does not require the database. So therefore, your data will be saved for that session only and if you rerun you will have to reenter the data. 
 Please Zoom Into the images to see them clearer.
+
 Home Page 1
 I Updated My Home Page to have buttons that lead you to each part of the website with ease to allow for a better UI and UX experience with a brief description of where each view will take you
  
