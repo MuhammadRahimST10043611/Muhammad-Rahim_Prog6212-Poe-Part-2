@@ -2,8 +2,8 @@ Muhammad Rahim
 ST10043611
 PROG6212
 POE PART 2
+![image](https://github.com/user-attachments/assets/3e6a683a-655b-44d1-955c-c64f7af53e97)
 
-![image](https://github.com/user-attachments/assets/eae6e898-a749-4c9e-a632-74ddf0a2a589)
 
 
 Table Of Contents
@@ -55,7 +55,7 @@ I Updated My Home Page to have buttons that lead you to each part of the website
 
 
 Home Page 2
-I also Improved on the colour scheme allowing it to look more formal and stand out better to the users.
+I also Improved the colour scheme allowing it to look more formal and stand out better to the users.
  
 ![image](https://github.com/user-attachments/assets/9f1067d8-4425-47d8-b824-d9dd694c2494)
 
